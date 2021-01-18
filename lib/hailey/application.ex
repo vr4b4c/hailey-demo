@@ -11,9 +11,12 @@ defmodule Hailey.Application do
       # Start the Ecto repository
       Hailey.Repo,
       # Start the endpoint when the application starts
-      HaileyWeb.Endpoint
+      HaileyWeb.Endpoint,
       # Starts a worker by calling: Hailey.Worker.start_link(arg)
       # {Hailey.Worker, arg},
+      Hailey.Recurrence.Registry,
+      Hailey.Recurrence.Supervisor,
+      {Task, &Hailey.Scheduling.Operation.up/0}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

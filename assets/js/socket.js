@@ -8,7 +8,8 @@
 // from the params if you are not using authentication.
 import {Socket} from "phoenix"
 
-let socket = new Socket("/socket", {params: {token: window.userToken}})
+// let socket = new Socket("/socket", {params: {token: window.userToken}})
+let socket = new Socket("/socket")
 
 // When you connect, you'll often need to authenticate the client.
 // For example, imagine you have an authentication plug, `MyAuth`,
@@ -55,9 +56,45 @@ let socket = new Socket("/socket", {params: {token: window.userToken}})
 socket.connect()
 
 // Now that you are connected, you can join channels with a topic:
-let channel = socket.channel("topic:subtopic", {})
-channel.join()
-  .receive("ok", resp => { console.log("Joined successfully", resp) })
-  .receive("error", resp => { console.log("Unable to join", resp) })
+// let channel = socket.channel("topic:subtopic", {})
+// let channel = socket.channel("schedule", {})
+// channel.join()
+//   .receive("ok", joined)
+//   .receive("error", resp => { console.log("Unable to join", resp) })
+
+// import color from './color';
+
+// channel.on("start", start);
+// channel.on("tick", tick);
+
+// function joined(scheduleIds) {
+//   console.log("Joined successfully", scheduleIds);
+
+//   scheduleIds.forEach(initializeBox);
+// }
+
+// function start(message) {
+//   console.log(message);
+
+//   initializeBox(message.schedule.id);
+// }
+
+// function tick(message) {
+//   var el = document.querySelector(".box[data-schedule-id='" + message.schedule.id + "']");
+
+//   if(el) {
+//     el.setAttribute('style', 'background-color: ' + color.random() + ';')
+//   }
+// };
+
+// const boxContainer = document.querySelector('.box-container');
+
+// function initializeBox(id) {
+//   var box = document.createElement('div');
+//   box.classList.add('box');
+//   box.setAttribute('data-schedule-id', id)
+
+//   boxContainer.appendChild(box);
+// }
 
 export default socket

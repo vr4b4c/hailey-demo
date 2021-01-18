@@ -1,3 +1,30 @@
 /* This file is for your main application css. */
 
 @import "./phoenix.css";
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+  grid-gap: 10px;
+}
+
+.box {
+  background-color: grey;
+}
+
+.box-odd {
+  background-color: red;
+}
+
+.box-odd.box-active {
+  background-color: orange;
+}
+
+.box-even {
+  background-color: blue;
+}
+
+.box-even.box-active {
+  background-color: purple;
+}

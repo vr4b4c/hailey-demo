@@ -1,35 +1,20 @@
-<section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
-  <p>A productive web framework that<br/>does not compromise speed or maintainability.</p>
+<section class='container js-simulation'>
+  <form class='js-form'>
+    <fieldset>
+      <label for='simulation[count]'>Count</label>
+      <select id='frequency' name='simulation[count]'>
+        <option value='1'>1</option>
+        <option value='2'>2</option>
+        <option value='5'>5</option>
+        <option value='10'>10</option>
+        <option value='100'>100</option>
+        <option value='1000'>1,000</option>
+      </select>
+    </fieldset>
+
+    <input class='button js-start' type='submit' value='Start' />
+    <input class='button js-stop' type='submit' value='Stop' />
+  </form>
 </section>
 
-<section class="row">
-  <article class="column">
-    <h2>Resources</h2>
-    <ul>
-      <li>
-        <a href="https://hexdocs.pm/phoenix/overview.html">Guides &amp; Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/blob/v1.4/CHANGELOG.md">v1.4 Changelog</a>
-      </li>
-    </ul>
-  </article>
-  <article class="column">
-    <h2>Help</h2>
-    <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on Freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
-    </ul>
-  </article>
-</section>
+<div class="box-container"></div>

@@ -3,6 +3,7 @@ defmodule HaileyWeb.UserSocket do
 
   ## Channels
   # channel "room:*", HaileyWeb.RoomChannel
+  channel "schedule", HaileyWeb.ScheduleChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
